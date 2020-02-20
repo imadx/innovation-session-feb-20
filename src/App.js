@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 
+import './App.css';
+
 const Home = lazy(() => import('./demo/index'));
 const DemoMemoize = lazy(() => import('./demo/memoize/App'));
 const DemoContext = lazy(() => import('./demo/context-api/App'));
