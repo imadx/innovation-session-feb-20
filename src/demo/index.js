@@ -15,6 +15,7 @@ export default () => {
           <Link to="/memoize">React.memo()</Link>
           <Link to="/context-api">Context API</Link>
           <Link to="/error-boundary">Error Boundary</Link>
+          <Link to="portal">Portals</Link>
       </div>
       <div className="footer">
         <img src={logo} alt="" />
