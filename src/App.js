@@ -6,6 +6,7 @@ import './App.css';
 const Home = lazy(() => import('./demo/index'));
 const DemoMemoize = lazy(() => import('./demo/memoize/App'));
 const DemoContext = lazy(() => import('./demo/context-api/App'));
+const DemoDerivedState = lazy(() => import('./demo/derived-state/App'));
 const DemoErrorBoundary = lazy(() => import('./demo/error-boundary/App'));
 const DemoPortal = lazy(() => import('./demo/portal/App'))
 
@@ -16,6 +17,7 @@ const App = () => (
         <Route exact path="/" component={Home}/>
         <Route path="/memoize" component={DemoMemoize}/>
         <Route path="/context-api" component={DemoContext}/>
+        <Route path="/derived-state" component={DemoDerivedState}/>
         <Route path="/error-boundary" component={DemoErrorBoundary}/>
         <Route path="/portal" component={DemoPortal}/>
       </Switch>
