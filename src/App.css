@@ -65,6 +65,8 @@ button:hover {
   color: #173f5f;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
+  user-select: none;
 }
 
 .price-details:first-child {
@@ -73,6 +75,7 @@ button:hover {
 
 .price-details div.price {
   padding: 1rem;
+  position: relative;
 }
 .price-details div.price h1,
 .price-details div.price h3 {
@@ -81,7 +84,7 @@ button:hover {
 }
 
 .price-details div.price h1 b,
-.price-details div.price h3 b{
+.price-details div.price h3 b {
   font-weight: bold;
 }
 
@@ -90,6 +93,30 @@ button:hover {
   display: block;
   background-color: #20639b;
   color: #00d8ff;
+}
+
+.memoized-content.price-details div.last-updated {
+  background-color: #008464;
+  color: #00ffa3;
+}
+.memoized-content.price-details {
+  background-color: #00ffa3;
+  color: #154a3d;
+}
+
+.price-details div.price::before {
+  content: "Re-renders";
+  display: block;
+  background-color: #20639b;
+  color: #fff;
+  right: 10px;
+  position: absolute;
+  padding: 5px 10px;
+}
+
+.memoized-content.price-details div.price::before {
+  content: "Memoized";
+  background-color: #008464;
 }
 
 .cart-item-information {
@@ -101,4 +128,34 @@ button:hover {
 
 .cart-button {
   margin-left: 1rem;
+}
+
+.App-home a { 
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f6d55c;
+  display: block;
+  margin: 0.8rem 0;
+  width: max-content;
+}
+
+.accent { 
+  color: #f6d55c;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.modal {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
