@@ -6,10 +6,10 @@ import logo from '../../img/logo.svg';
 
 const App = () => {
 	return (
-		<div className='App App-home'>
+		<div className='App'>
 			<div className='content'>
 				<hgroup>
-					<h1>Error Boundary</h1>
+					<h1>Error Boundary Demo</h1>
 					<h3>Hint: Click the button until the counter reaches 5</h3>
 				</hgroup>
 

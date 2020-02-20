@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const portal = document.getElementById('portal');
+const portal = document.getElementById('modal-container-portal');
 
 class Modal extends React.Component {
   constructor(props) {

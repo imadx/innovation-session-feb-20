@@ -1,5 +1,7 @@
 import React from 'react';
-import Modal from './Modal'
+import Modal from './Modal';
+
+import logo from '../../img/logo.svg'
 
 class App extends React.Component {
   constructor(props) {
@@ -24,20 +26,33 @@ class App extends React.Component {
       <Modal>
         <div className='modal'>
           <div>
-            With a portal, we can render content into a different part of the
-            DOM, as if it were any other React child.
+            <p>
+              With a portal, we can render content into a different part of the
+              DOM, as if it were any other React child.
+            </p>
+            <p>
+              This is being rendered inside the #modal-container-portal div.
+            </p>
+            <button onClick={this.handleHide}>Hide modal</button>
           </div>
-          This is being rendered inside the #modal-container div.
-          <button onClick={this.handleHide}>Hide modal</button>
         </div>
       </Modal>
     ) : null;
 
     return (
-      <div className='app'>
-        This div has overflow: hidden.
-        <button onClick={this.handleShow}>Show modal</button>
-        {modal}
+      <div className='App'>
+        <div className='content'>
+          <hgroup>
+            <h1>Portal Demo</h1>
+            <h3>Hint: Click on Show Modal button to Show the Modal rendered through a ReactDOM.createPortal()</h3>
+          </hgroup>
+
+          <button onClick={this.handleShow}>Show modal</button>
+          {modal}
+        </div>
+        <div className='footer'>
+          <img src={logo} alt='' />
+        </div>
       </div>
     );
   }

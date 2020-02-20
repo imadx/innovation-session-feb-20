@@ -11,7 +11,7 @@ const DemoPortal = lazy(() => import('./demo/portal/App'))
 
 const App = () => (
   <Router>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div class="loading">Loading...</div>}>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/memoize" component={DemoMemoize}/>
