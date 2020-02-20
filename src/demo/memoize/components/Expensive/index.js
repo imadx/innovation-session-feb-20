@@ -5,13 +5,14 @@ const ExpensiveComponent = ({ price, lastUpdated, ...others }) => {
 	console.log(
 		'TCL: ExpensiveComponent -> ExpensiveComponent',
 		others['data-component-id'],
-		lastUpdated
 	);
 	return (
-		<div {...others}>
-			<h1>Price: {formatPrice(price)}</h1>
-			<h3>Including tax: {formatPrice(price * 1.1)}</h3>
-			<span>Last updated on {lastUpdated.toDateString()}</span>
+		<div className="price-details" {...others}>
+			<div className="price">
+				<h1>Price: {formatPrice(price)}</h1>
+				<h3>Including tax: {formatPrice(price * 1.1)}</h3>
+			</div>
+			<div className="last-updated">Last updated on {lastUpdated.toDateString()}</div>
 		</div>
 	);
 };
