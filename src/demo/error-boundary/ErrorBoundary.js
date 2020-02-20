@@ -27,7 +27,7 @@ class ErrorBoundary extends React.Component {
       // Error path
       return (
         <div>
-          <h2>Something went wrong.</h2>
+          <h2 className="accent">Something went wrong (Just like we wanted)</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />

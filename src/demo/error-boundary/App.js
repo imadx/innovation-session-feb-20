@@ -1,5 +1,5 @@
 import React from 'react';
-import CallError from './CallError';
+import ErrorCausingComponent from './ErrorCausingComponent';
 import ErrorBoundary from './ErrorBoundary';
 
 import logo from '../../img/logo.svg';
@@ -14,7 +14,7 @@ const App = () => {
 				</hgroup>
 
 				<ErrorBoundary>
-					<CallError />
+					<ErrorCausingComponent />
 				</ErrorBoundary>
 			</div>
 			<div className='footer'>
