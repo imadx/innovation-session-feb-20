@@ -3,11 +3,21 @@ import {
   Link
 } from "react-router-dom";
 
+import logo from '../img/logo.svg'
+
 export default () => {
-  return <div>
-    <h1>Demo Homepage</h1>
-    <Link to="/memoize">React.memo()</Link>
-    <Link to="/context-api">Context API</Link>
-    <Link to="/error-boundary">Error Boundary</Link>
-  </div>
+  return <div className='App App-home'>
+      <div className="content">
+        <hgroup>
+          <h1>Innovation Session - Feb 20</h1>
+          <h3>Demo Applications</h3>
+        </hgroup>
+          <Link to="/memoize">React.memo()</Link>
+          <Link to="/context-api">Context API</Link>
+          <Link to="/error-boundary">Error Boundary</Link>
+      </div>
+      <div className="footer">
+        <img src={logo} alt="" />
+      </div>
+    </div>
 }

@@ -129,3 +129,13 @@ button:hover {
 .cart-button {
   margin-left: 1rem;
 }
+
+.App-home a { 
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f6d55c;
+  display: block;
+  margin: 0.8rem 0;
+  width: max-content;
+}
